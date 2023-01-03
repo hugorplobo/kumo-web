@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.11.2"
+    "axios": "^1.2.2",
+    "preact": "^10.11.2",
+    "react-icons": "^4.7.1",
+    "swr": "^2.0.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",
