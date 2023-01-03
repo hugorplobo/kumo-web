@@ -26,15 +26,17 @@ export function Files({ url }: Props) {
     });
 
     return (
-        <div className="files">
-            { isLoading ? (
-                "Loading..."
+        <div className="files-container">
+            { isLoading || !token ? (
+                <div>Loading...</div>
             ) : error ? (
-                "Something went wrong"
-            ) : !data ? (
-                "No files found"
+                <div>Something went wrong</div>
+            ) : data && data.length < 1 ? (
+                <div>No files found</div>
             ) : (
-                data!.map(file => <File name={file.name} />)
+                <div className="files">
+                    { data!.map(file => <File name={file.name} />) }
+                </div>
             ) }
         </div>
     )
